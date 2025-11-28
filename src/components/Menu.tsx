@@ -11,8 +11,8 @@ import {
 } from '@ionic/react';
 
 import { useLocation } from 'react-router-dom';
-import { archiveOutline, archiveSharp, bookmarkOutline, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp } from 'ionicons/icons';
-import './Menu.css';
+import { archiveOutline, archiveSharp, bookmarkOutline, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, person, trashOutline, trashSharp, warningOutline, warningSharp } from 'ionicons/icons';
+import '../styles/Menu.css';
 
 interface AppPage {
   url: string;
@@ -23,26 +23,33 @@ interface AppPage {
 
 const appPages: AppPage[] = [
   {
-    title: 'Inbox',
-    url: '/folder/Inbox',
-    iosIcon: mailOutline,
-    mdIcon: mailSharp
+   title: "Perfil",
+    url: "/folder/Perfil",
+    iosIcon: person,
+    mdIcon: person
   },
   {
-    title: 'Outbox',
-    url: '/folder/Outbox',
+    title: 'Crear Blog',
+    url: '/folder/Crear_Blog',
+    iosIcon: mailOutline,
+    mdIcon: mailSharp
+
+  },
+  {
+    title: 'Blogs',  
+    url: '/folder/Blogs',
     iosIcon: paperPlaneOutline,
     mdIcon: paperPlaneSharp
   },
   {
-    title: 'Favorites',
-    url: '/folder/Favorites',
+    title: 'Borradores',
+    url: '/folder/Borradores',
     iosIcon: heartOutline,
     mdIcon: heartSharp
   },
   {
-    title: 'Archived',
-    url: '/folder/Archived',
+    title: 'Estadisticas',
+    url: '/folder/Estadisticas',
     iosIcon: archiveOutline,
     mdIcon: archiveSharp
   },
@@ -84,7 +91,7 @@ const Menu: React.FC = () => {
         </IonList>
 
         <IonList id="labels-list">
-          <IonListHeader>Labels</IonListHeader>
+          <IonListHeader>Categorias</IonListHeader>
           {labels.map((label, index) => (
             <IonItem lines="none" key={index}>
               <IonIcon aria-hidden="true" slot="start" icon={bookmarkOutline} />

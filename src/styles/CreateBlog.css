@@ -1,0 +1,42 @@
+.createBlogContainer {
+  padding: 20px;
+}
+
+/* IonItem minimalista */
+.minimal-item {
+  --background: transparent;
+  --padding-start: 0;
+  --inner-padding-end: 0;
+
+  margin-bottom: 18px;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+/* Labels arriba */
+.minimal-item ion-label {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 14px!important;
+}
+
+/* Layout del input con select */
+.row-flex {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ionTaxtArea{
+  height: 150px;
+  font-size: 16px;
+}
+.ionSelect {
+  width: auto;
+  flex-grow: 1; /* opcional si quieres que se estire */
+  --padding-start: 0;
+  --padding-end: 0;
+  --inner-padding-start: 0;
+  --inner-padding-end: 0;
+  --placeholder-color: #888;
+}

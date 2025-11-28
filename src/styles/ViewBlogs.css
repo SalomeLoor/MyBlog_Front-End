@@ -1,0 +1,61 @@
+.blogs-wrapper {
+  --background: transparent;
+  width: 100%;
+  padding: 20px 10px;
+}
+
+.blogs-row {
+  justify-content: center;
+}
+
+/* Tarjetas equilibradas */
+.blog-card {
+  border-radius: 14px;
+  padding: 6px;
+  height: 250px;
+  min-height: 180px;
+
+  /* Mejor integración en dark/light */
+  --background: var(--ion-card-background, var(--ion-color-light));
+
+  box-shadow: var(--ion-shadow-elevation-2);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+/* Hover suave */
+.blog-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--ion-shadow-elevation-4);
+}
+
+/* Texto del título */
+.blog-card ion-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ion-text-color);
+}
+
+/* Resumen */
+.summary {
+  font-size: 0.9rem;
+  color: var(--ion-color-medium);
+  margin-bottom: 8px;
+
+  /* Limitar texto sin romper diseño */
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Categoría */
+.category {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: var(--ion-text-color);
+}
+
+.category strong {
+  color: var(--ion-color-primary);
+}
